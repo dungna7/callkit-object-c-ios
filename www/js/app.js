@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $timeout, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs).
@@ -13,8 +13,37 @@ angular.module('starter', ['ionic'])
     // least on iOS. It's a dead giveaway that an app is using a Web View. However, it's sometimes
     // useful especially with forms, though we would prefer giving the user a little more room
     // to interact with the app.
+//    $rootScope.deviceToken = 'Waiting...';
+//        $rootScope.log = '';
+//
+//        /* Helper functions */
+//        function log(msg) {
+//            $timeout(function() {
+//                var m = JSON.stringify(msg);
+//
+//                console.log(m);
+//                $rootScope.log += '<br>' + m;
+//            }, 300);
+//        }
+//    var push = new window.VoipPush();
+//
+//    push.register(function onRegistered(data) {
+//        console.log('VOIP PushKit registered');
+//        log('VOIP PushKit registered');
+//        $rootScope.deviceToken = data.token;
+//        log(data.token);
+//        console.log(data.token);
+//    }, function onNotification(notification) {
+//        console.log('VOIP push notification received:');
+//        console.log(notification);
+//        log('VOIP push notification received:');
+//        log(notification.payload);
+//    });
+    
+    
+
     if (window.cordova && window.Keyboard) {
-      window.Keyboard.hideKeyboardAccessoryBar(true);
+      // window.Keyboard.hideKeyboardAccessoryBar(true);
     }
 
     if (window.StatusBar) {
